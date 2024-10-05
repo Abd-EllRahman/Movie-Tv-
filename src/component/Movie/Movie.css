@@ -1,0 +1,54 @@
+.container{
+    margin-top: 10%;
+}
+.card {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #d9823682; 
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .card:hover .overlay {
+    opacity: 1;
+  }
+  
+  .movie-title {
+    font-size: 1.2em;
+    text-align: center;
+    padding: 10px;
+  }
+  .vote{
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #D98236;
+  }
+  .source-tag{
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #D98236;
+
+  }
+  

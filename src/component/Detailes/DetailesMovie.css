@@ -1,0 +1,70 @@
+.det{
+    margin-top: 8%;
+    display: flex;
+    flex-wrap: wrap;
+    
+
+}
+.poster-container {
+    border: 3px solid #D98236; /* Border color */
+    border-radius: 8px; /* Rounded corners */
+    
+  }
+  
+  .poster-image {
+    width: 100%; /* Full width for responsiveness */
+    border-radius: 5px; /* Rounded corners for the image */
+    height: 100%;
+  }
+  
+  .genre-badge {
+    padding: 0.5rem; /* Padding for badges */
+    margin: 0.5rem; /* Spacing between badges */
+    border-radius: 5px; /* Rounded corners for badges */
+  }
+  
+  .details-container {
+    padding: 10px; /* Padding for the details */
+  }
+  
+  .details-container p {
+    margin: 0.5rem 0; /* Spacing between paragraphs */
+  }
+  .cast-list {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    display: flex; /* Use flexbox to align items in a row */
+  }
+  
+  .cast-item {
+    margin-right: 15px; /* Space between items */
+  }
+  
+  
+  .data{
+    display: flex;
+  }
+  .heading{
+    color: #D98236;
+    
+  }
+  .custom-button {
+    background-color: transparent; /* Button background */
+    border: 1px solid #D98236; /* Border color */
+    color: #ffffff; /* Text color */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 20px; /* Padding for a better button size */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer on hover */
+    margin-top: 5px;
+    
+  }
+  
+  
+  
+  .custom-button:hover {
+    background-color: #D98236; /* Light background on hover */
+    color: #ffffff; /* Change text color on hover */
+  }
+  

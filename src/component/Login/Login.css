@@ -1,0 +1,35 @@
+.login-card {
+    background-color: #D98236; 
+    margin-top: 15%;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    color: #fff;
+  }
+  
+  .input-field {
+    border: 1px solid #ced4da; /* Input border color */
+  }
+  
+.btn-submit {
+   background-color: transparent;
+   color: #fff;
+   cursor: pointer;
+   border: 2px solid #ffffff; 
+   padding: 10px 20px; 
+   border-radius: 5px; 
+   font-size: 16px; 
+   transition: background-color 0.3s, color 0.3s;
+
+}
+
+
+  .btn-submit:hover {
+    background-color: #a5550f; 
+  }
+  .sign{
+    color: #030202;
+  }
+
+  .sign:hover{
+    color: #1a125d;
+  }

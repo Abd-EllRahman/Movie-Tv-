@@ -1,0 +1,154 @@
+.banner{
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    position: relative;
+  }
+  .banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1; 
+  }
+  .text-shadow{
+    text-shadow: 2px 2px 5px rgba(219, 216, 216, 0.5);
+
+
+}
+  
+  .carousel-arrows {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 2; 
+  } 
+  
+  
+  
+  .arrow {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    transition: background-color 0.3s, transform 0.3s; /* Add transition */
+  }
+  
+  .arrow:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: scale(1.1); /* Slight scale effect on hover */
+  }
+  
+  /* Trailer modal container */
+  .trailer-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 20px;
+  }
+  
+  /* YouTube iframe styling */
+  .trailer-modal iframe {
+    max-width: 90%;
+    max-height: 80%;
+    border: none;
+  }
+  
+  /* Close button styling */
+  .trailer-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10000; /* Ensure it is above everything */
+  }
+  
+  .trailer-close-btn:hover {
+    color: #D98236; 
+  }
+  .custom-button {
+    background-color: transparent; /* Button background */
+    border: 1px solid #D98236; /* Border color */
+    color: #ffffff; /* Text color */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 20px; /* Padding for a better button size */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer on hover */
+    
+  }
+  
+  
+  
+  .custom-button:hover {
+    background-color: #D98236; /* Light background on hover */
+    color: #ffffff; /* Change text color on hover */
+  }
+
+  .close-btn {
+    font-size: 1.5rem; /* Adjust size as needed */
+    line-height: 1; /* Center the icon vertically */
+    color: #fff; /* Color matching the alert message */
+    cursor: pointer; /* Change cursor on hover */
+  }
+  
+  .close-btn:hover {
+    color: #D98236; /* Change color on hover */
+  }
+  .card {
+    position: relative;
+    overflow: hidden;
+  }
+  .card:hover{
+    
+      transform: scale(1.05);
+  }
+  
+  .card-img-top {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #d9823682; 
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .image-container:hover .overlay {
+    opacity: 1;
+    
+  }
+  
+  .movie-title {
+    font-size: 1.2em;
+    text-align: center;
+    padding: 10px;
+  }
