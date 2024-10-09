@@ -32,7 +32,7 @@ export default function ItemDetails() {
       );
       setItemDetails(movieDetails.data);
       await getMovieCast(id); // Fetch the cast after getting movie details
-      await getMovieSimilar(id); // Fetch similar movies
+      await fetchSimilarMovies(id); // Fetch similar movies using the new function
       setLoading(false);
     } catch (error) {
       console.error('Error fetching movie details', error);
@@ -41,13 +41,13 @@ export default function ItemDetails() {
     }
   };
 
-  // Fetch similarities 
-  async function getMovieSimilar(id) {
+  // New Function to Fetch Similar Movies
+  async function fetchSimilarMovies(id) {
     try {
-      const movieDetails = await axios.get(
-        `https://api.themoviedb.org/3/movie/${id}/similar?api_key=44ee5523e457e74020effc2bddc4592e&include_adult=false`
+      const response = await axios.get(
+        `https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=44ee5523e457e74020effc2bddc4592e&include_adult=false`
       );
-      setMovieSimilar(movieDetails.data.results); // Update this line to use 'results'
+      setMovieSimilar(response.data.results); // Update state with recommended movies
     } catch (error) {
       console.error('Error fetching similar movies', error);
     }
@@ -147,7 +147,6 @@ export default function ItemDetails() {
             ))}
           </ul>
           
-          {/* Display actors' names */}
           <h4 className="heading py-2">Cast:</h4>
           <ul className="cast-list">
             {cast.length > 0 ? (
@@ -183,7 +182,7 @@ export default function ItemDetails() {
           
           <button
             className="custom-button"
-            onClick={() => fetchTrailer(itemDetails.id, 'movie', setTrailerKey, setNoTrailerMessage)} // Pass the required parameters
+            onClick={() => fetchTrailer(itemDetails.id, 'movie', setTrailerKey, setNoTrailerMessage)}
             aria-label="Watch Trailer"
           >
             Watch Trailer
@@ -208,7 +207,7 @@ export default function ItemDetails() {
         </div>
       </div>
 
-      {movieSimilar.length > 0 && ( // Check if there are similar movies
+      {movieSimilar.length > 0 && (
         <div className="upcoming-section py-5 text-light">
           <div className="container">
             <h2 className="display-4 text-shadow">You might also like</h2>
